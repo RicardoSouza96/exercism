@@ -2,9 +2,7 @@ public class SecurityPassMaker
 {
     public string GetDisplayName(TeamSupport support)
     {
-        if(support.GetType() == typeof(SecurityJunior) || support.GetType() == typeof(SecurityIntern) || support.GetType() == typeof(PoliceLiaison))
-            return support.Title;
-        if(support is Security)
+        if(support.GetType() == typeof(Security))
             return $"{support.Title} Priority Personnel";
         if(support is Staff)
             return support.Title;
